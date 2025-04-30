@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Reproductor de Audio Mejorado</title>
+</head>
+<body>
+    <h1>Reproductor de Audio Mejorado con DOM</h1>
+    
+    <div class="player-container">
+        <div class="player-header">
+            <div class="now-playing" id="now-playing">Selecciona una canción</div>
+            <div>
+                <button class="upload-btn" id="upload">Subir Audio</button>
+                <input type="file" id="fileInput" accept="audio/*" style="display: none;">
+            </div>
+        </div>
+        
+        <div class="progress-container">
+            <div class="progress-bar" id="progressBar"></div>
+        </div>
+        
+        <div class="volume-container">
+            <span>Volumen:</span>
+            <input type="range" min="0" max="1" step="0.01" value="0.5" class="volume-slider" id="volumeSlider">
+            <span id="volumeValue">50%</span>
+        </div>
+        
+        <div class="visualization-container" id="visualizer">
+            <!-- Las barras de visualización se generarán dinámicamente -->
+        </div>
+        
+        <div class="controls">
+            <button class="control-btn" id="previous">Anterior</button>
+            <button class="control-btn" id="play">Reproducir</button>
+            <button class="control-btn" id="stop">Detener</button>
+            <button class="control-btn" id="next">Siguiente</button>
+            <button class="control-btn" id="shuffle">Aleatorio</button>
+        </div>
+    </div>
+    
+    <div class="playlist-container">
+        <div class="playlist-header">Lista de reproducción</div>
+        <div id="playlist">
+            <!-- Los elementos de la playlist se generarán dinámicamente -->
+            <div class="playlist-item" data-src="https://examples.com/audio/sample1.mp3">
+                <span>Canción de ejemplo 1</span>
+                <div class="playlist-controls">
+                    <button class="playlist-btn remove-btn">✕</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
