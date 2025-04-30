@@ -20,12 +20,6 @@ function initDatabase() {
             store.createIndex('name', 'name', { unique: false });
             store.createIndex('src', 'src', { unique: false });
             
-            // Añadir canciones de muestra a la base de datos
-            const sampleTracks = [
-                { name: 'Sonido de pájaros', src: 'audio/pajaritos.mp3' },
-                { name: 'Audio de muestra', src: 'audio/Audio.mp3' }
-            ];
-            
             const playlistStore = event.target.transaction.objectStore('playlist');
             sampleTracks.forEach(track => {
                 playlistStore.add(track);
