@@ -28,6 +28,7 @@ body {
 
 .controls {
     display: flex;
+    justify-content: center;
     gap: 10px;
     margin-bottom: 15px;
 }
@@ -36,38 +37,19 @@ body {
     padding: 10px 15px;
     border: none;
     border-radius: 5px;
-    background-color: #4CAF50;
-    color: white;
     cursor: pointer;
     transition: background-color 0.3s;
 }
 
-.control-btn:hover {
-    background-color: #45a049;
-}
-
-#stop {
-    background-color: #f44336;
-}
-
-#stop:hover {
-    background-color: #d32f2f;
-}
-
-#previous, #next, #shuffle {
-    background-color: #2196F3;
-}
-
-#previous:hover, #next:hover, #shuffle:hover {
-    background-color: #0b7dda;
-}
-
 .upload-btn {
-    background-color: #ff9800;
+    background-color: #519af8;
+    border: 1px;
+    border-radius: 5px ;
+    padding: 5px;
 }
 
 .upload-btn:hover {
-    background-color: #e68a00;
+    background-color: #2b78dd;
 }
 
 .progress-container {

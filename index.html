@@ -1,46 +1,125 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
     <title>Reproductor de Audio Mejorado</title>
 </head>
+
 <body>
-    <h1>Reproductor de Audio Mejorado con DOM</h1>
-    
     <div class="player-container">
         <div class="player-header">
             <div class="now-playing" id="now-playing">Selecciona una canción</div>
             <div>
-                <button class="upload-btn" id="upload">Subir Audio</button>
+                <button class="upload-btn" id="upload">
+                    <?xml version="1.0" ?>
+
+                    <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                    <svg width="10px" height="10px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+
+                        <title />
+
+                        <g id="Complete">
+
+                            <g id="upload">
+
+                                <g>
+
+                                    <path d="M3,12.3v7a2,2,0,0,0,2,2H19a2,2,0,0,0,2-2v-7" fill="none" stroke="#000000"
+                                        stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+
+                                    <g>
+
+                                        <polyline data-name="Right" fill="none" id="Right-2"
+                                            points="7.9 6.7 12 2.7 16.1 6.7" stroke="#000000" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" />
+
+                                        <line fill="none" stroke="#000000" stroke-linecap="round"
+                                            stroke-linejoin="round" stroke-width="2" x1="12" x2="12" y1="16.3"
+                                            y2="4.8" />
+
+                                    </g>
+
+                                </g>
+
+                            </g>
+
+                        </g>
+
+                    </svg>
+                    Subir canción
+                </button>
                 <input type="file" id="fileInput" accept="audio/*" style="display: none;">
             </div>
         </div>
-        
+
         <div class="progress-container">
             <div class="progress-bar" id="progressBar"></div>
         </div>
-        
+
         <div class="volume-container">
             <span>Volumen:</span>
             <input type="range" min="0" max="1" step="0.01" value="0.5" class="volume-slider" id="volumeSlider">
             <span id="volumeValue">50%</span>
         </div>
-        
+
         <div class="visualization-container" id="visualizer">
             <!-- Las barras de visualización se generarán dinámicamente -->
         </div>
-        
+
         <div class="controls">
-            <button class="control-btn" id="previous">Anterior</button>
-            <button class="control-btn" id="play">Reproducir</button>
-            <button class="control-btn" id="stop">Detener</button>
-            <button class="control-btn" id="next">Siguiente</button>
-            <button class="control-btn" id="shuffle">Aleatorio</button>
+            <button class="control-btn" id="previous">
+                <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                <svg width="10px" height="10px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M18.3956 19.7691C19.0541 20.2687 20 19.799 20 18.9724L20 5.02764C20 4.20106 19.0541 3.73137 18.3956 4.23095L9.20476 11.2033C8.67727 11.6035 8.67727 12.3965 9.20476 12.7967L18.3956 19.7691ZM22 18.9724C22 21.4521 19.1624 22.8612 17.1868 21.3625L7.99598 14.3901C6.41353 13.1896 6.41353 10.8104 7.99599 9.60994L17.1868 2.63757C19.1624 1.13885 22 2.5479 22 5.02764L22 18.9724Z"
+                        fill="#0F0F0F" />
+                    <path
+                        d="M2 3C2 2.44772 2.44772 2 3 2C3.55228 2 4 2.44772 4 3V21C4 21.5523 3.55228 22 3 22C2.44772 22 2 21.5523 2 21V3Z"
+                        fill="#0F0F0F" />
+                </svg>
+            </button>
+            <button class="control-btn" id="play">
+                <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                <svg width="10px" height="10px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M16.6582 9.28638C18.098 10.1862 18.8178 10.6361 19.0647 11.2122C19.2803 11.7152 19.2803 12.2847 19.0647 12.7878C18.8178 13.3638 18.098 13.8137 16.6582 14.7136L9.896 18.94C8.29805 19.9387 7.49907 20.4381 6.83973 20.385C6.26501 20.3388 5.73818 20.0469 5.3944 19.584C5 19.053 5 18.1108 5 16.2264V7.77357C5 5.88919 5 4.94701 5.3944 4.41598C5.73818 3.9531 6.26501 3.66111 6.83973 3.6149C7.49907 3.5619 8.29805 4.06126 9.896 5.05998L16.6582 9.28638Z"
+                        stroke="#000000" stroke-width="2" stroke-linejoin="round" />
+                </svg>
+            </button>
+            <button class="control-btn" id="stop">
+                <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                <svg width="10px" height="10px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M2 12C2 7.28595 2 4.92893 3.46447 3.46447C4.92893 2 7.28595 2 12 2C16.714 2 19.0711 2 20.5355 3.46447C22 4.92893 22 7.28595 22 12C22 16.714 22 19.0711 20.5355 20.5355C19.0711 22 16.714 22 12 22C7.28595 22 4.92893 22 3.46447 20.5355C2 19.0711 2 16.714 2 12Z"
+                        stroke="#000000" stroke-width="1.5" />
+                </svg>
+            </button>
+            <button class="control-btn" id="next">
+                <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                <svg width="10px" height="10px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd"
+                        d="M5.60439 4.23093C4.94586 3.73136 4 4.20105 4 5.02762V18.9724C4 19.799 4.94586 20.2686 5.60439 19.7691L14.7952 12.7967C15.3227 12.3965 15.3227 11.6035 14.7952 11.2033L5.60439 4.23093ZM2 5.02762C2 2.54789 4.83758 1.13883 6.81316 2.63755L16.004 9.60993C17.5865 10.8104 17.5865 13.1896 16.004 14.3901L6.81316 21.3625C4.83758 22.8612 2 21.4521 2 18.9724V5.02762Z"
+                        fill="#0F0F0F" />
+                    <path
+                        d="M20 3C20 2.44772 20.4477 2 21 2C21.5523 2 22 2.44772 22 3V21C22 21.5523 21.5523 22 21 22C20.4477 22 20 21.5523 20 21V3Z"
+                        fill="#0F0F0F" />
+                </svg>
+            </button>
+            <button class="control-btn" id="shuffle">
+                <?xml version="1.0" encoding="utf-8"?><!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+                <svg fill="#000000" width="10px" height="10px" viewBox="0 0 32 32" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M0 24q0 0.832 0.576 1.44t1.44 0.576h1.984q2.048 0 3.904-0.8t3.168-2.144 2.144-3.2 0.8-3.872q0-2.464 1.728-4.224t4.256-1.76h4v1.984q0 0.672 0.384 1.152t0.864 0.704 1.12 0.128 1.056-0.544l4-4q0.608-0.64 0.576-1.44t-0.576-1.408l-4-4q-0.48-0.448-1.088-0.544t-1.12 0.128-0.864 0.704-0.352 1.12v2.016h-4q-2.016 0-3.872 0.8t-3.2 2.112-2.144 3.2-0.768 3.872q0 2.496-1.76 4.256t-4.256 1.76h-1.984q-0.832 0-1.44 0.576t-0.576 1.408zM0 8.032q0 0.832 0.576 1.408t1.44 0.576h1.984q1.408 0 2.592 0.608t2.080 1.664q0.672-2.048 1.984-3.68-2.912-2.592-6.656-2.592h-1.984q-0.832 0-1.44 0.608t-0.576 1.408zM13.376 23.456q2.848 2.56 6.624 2.56h4v2.016q0 0.64 0.384 1.152t0.864 0.704 1.12 0.096 1.056-0.544l4-4q0.608-0.608 0.576-1.44t-0.576-1.376l-4-4q-0.48-0.48-1.088-0.576t-1.12 0.128-0.864 0.736-0.352 1.12v1.984h-4q-1.376 0-2.592-0.576t-2.048-1.664q-0.704 2.048-1.984 3.68z">
+                    </path>
+                </svg>
+            </button>
         </div>
     </div>
-    
+
     <div class="playlist-container">
         <div class="playlist-header">Lista de reproducción</div>
         <div id="playlist">
@@ -55,4 +134,5 @@
     </div>
     <script src="script.js"></script>
 </body>
+
 </html>
